@@ -624,7 +624,7 @@ public class GameScene extends Scene {
 
     private void chooseCards() {
         JsonReader jReader = new JsonReader();
-        List<CardInfo> listOfCards = jReader.readJson("/Onitama/res/Cards/cards.json");
+        List<CardInfo> listOfCards = jReader.readJson("Onitama/res/Cards/cards.json");
 
         gameCards = new HashMap<>();
         Set<Integer> set = new HashSet<>();
@@ -647,7 +647,7 @@ public class GameScene extends Scene {
 
     private void loadCards(List<String> cards) {
         JsonReader jReader = new JsonReader();
-        List<CardInfo> listOfCards = jReader.readJson("/Onitama/res/Cards/cards.json");
+        List<CardInfo> listOfCards = jReader.readJson("Onitama/res/Cards/cards.json");
 
         gameCards = new HashMap<>();
         Set<Integer> set = new HashSet<>();

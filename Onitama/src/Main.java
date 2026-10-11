@@ -2,6 +2,7 @@ package Onitama.src;
 
 import java.awt.*;
 import java.awt.event.KeyEvent;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -54,7 +55,7 @@ public class Main {
         // create engine
         engine = new GameEngine();
         engine.setResolution(Settings.resolution);
-        engine.setIcon(Util.getImage("/Onitama/res/Sprites/redKing.png"));
+        engine.setIcon(Util.getImage("Onitama/res/Sprites/redKing.png"));
 
         
         if (testing) {
@@ -76,7 +77,7 @@ public static class FontManager {
     static {
         try {
             // Load the default font using resource loader
-            InputStream defaultFontStream = FontManager.class.getResourceAsStream("/Onitama/res/Fonts/monofonto.otf");
+            InputStream defaultFontStream = new FileInputStream("Onitama/res/Fonts/monofonto.otf");
             defaultFont = Font.createFont(Font.TRUETYPE_FONT, defaultFontStream);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(defaultFont);
@@ -89,7 +90,7 @@ public static class FontManager {
     static {
         try {
             // Load the Unicode font using resource loader
-            InputStream unicodeFontStream = FontManager.class.getResourceAsStream("/Onitama/res/Fonts/Symbola.ttf");
+            InputStream unicodeFontStream = new FileInputStream("Onitama/res/Fonts/Symbola.ttf");
             unicodeFont = Font.createFont(Font.TRUETYPE_FONT, unicodeFontStream);
             GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
             ge.registerFont(unicodeFont);

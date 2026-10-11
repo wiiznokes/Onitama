@@ -27,7 +27,7 @@ public class JsonReader {
         JSONParser jsonParser = new JSONParser();
 
         // Open the InputStream from the file path
-        try (InputStreamReader reader = new InputStreamReader(JsonReader.class.getResourceAsStream(filePath))) {
+        try (InputStreamReader reader = new InputStreamReader(new FileInputStream(filePath))) {
             // Parse Json file
             JSONObject jsonObject = (JSONObject) jsonParser.parse(reader);
             

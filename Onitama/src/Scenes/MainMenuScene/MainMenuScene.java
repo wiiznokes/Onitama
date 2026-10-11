@@ -42,7 +42,7 @@ public class MainMenuScene extends Scene {
         //createTitleShadow();
         createButtons();
 
-        Sprite titleSprite = new Sprite(Util.getImage("/Onitama/res/Sprites/Title_byMayaShieda.png"));
+        Sprite titleSprite = new Sprite(Util.getImage("Onitama/res/Sprites/Title_byMayaShieda.png"));
         GameObject title = new GameObject();
         title.setSprite(titleSprite);
         title.setScale(new Vector2D(0.4, 0.4));

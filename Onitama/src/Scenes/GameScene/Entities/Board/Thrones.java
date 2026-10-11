@@ -17,9 +17,9 @@ public class Thrones extends TileMap {
     public Thrones(int lines, int columns, Dimension area, Vector2D offset) {
         super(5, 5, area, offset);
 
-        redThroneSprite = new Sprite(Util.getImage("/Onitama/res/Sprites/redThrone.png"));
+        redThroneSprite = new Sprite(Util.getImage("Onitama/res/Sprites/redThrone.png"));
         
-        blueThroneSprite = new Sprite(Util.getImage("/Onitama/res/Sprites/blueThrone.png"));
+        blueThroneSprite = new Sprite(Util.getImage("Onitama/res/Sprites/blueThrone.png"));
         
         addTile(0, 2, new Tile(this, 0, 2, blueThroneSprite));
         addTile(4, 2, new Tile(this, 4, 2, redThroneSprite));
